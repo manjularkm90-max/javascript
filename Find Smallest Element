@@ -1,0 +1,11 @@
+let arr = [40, 10, 30, 5, 20];
+
+let smallest = arr[0];
+
+for (let num of arr) {
+    if (num < smallest) {
+        smallest = num;
+    }
+}
+
+console.log(smallest);
