@@ -1,0 +1,8 @@
+function moveZeros(arr) {
+    let result = arr.filter(num => num !== 0);
+    let zeros = arr.length - result.length;
+
+    return result.concat(Array(zeros).fill(0));
+}
+
+console.log(moveZeros([0, 1, 0, 3, 12]));
