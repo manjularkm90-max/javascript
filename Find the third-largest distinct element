@@ -1,0 +1,8 @@
+function thirdLargest(arr) {
+    let unique = [...new Set(arr)];
+    unique.sort((a, b) => b - a);
+
+    return unique.length >= 3 ? unique[2] : null;
+}
+
+console.log(thirdLargest([10, 5, 20, 8, 15]));
