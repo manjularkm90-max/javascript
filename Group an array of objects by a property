@@ -1,0 +1,20 @@
+function groupByRole(users) {
+    return users.reduce((groups, user) => {
+        const role = user.role;
+
+        if (!groups[role]) {
+            groups[role] = [];
+        }
+
+        groups[role].push(user.name);
+        return groups;
+    }, {});
+}
+
+const users = [
+    { name: "Asha", role: "Developer" },
+    { name: "Ravi", role: "Tester" },
+    { name: "Mani", role: "Developer" }
+];
+
+console.log(groupByRole(users));
