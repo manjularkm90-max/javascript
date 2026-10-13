@@ -1,0 +1,14 @@
+function isArmstrong(n) {
+    let digits = String(n).split("");
+    let power = digits.length;
+
+    let sum = digits.reduce(
+        (total, digit) => total + Number(digit) ** power,
+        0
+    );
+
+    return sum === n;
+}
+
+console.log(isArmstrong(153));
+console.log(isArmstrong(123));
